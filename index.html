@@ -1,0 +1,131 @@
+<html manifest="Cache.manifest">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>PS4 7.02 Jailbreak 40% better(T)</title>
+    <link rel="shortcut icon" href="favicon.ico"></link>
+</head>   
+<body>
+	<script>
+        window.applicationCache.ondownloading = function()
+        {
+            alert("Caching started !!")
+        };
+
+        window.applicationCache.onprogress = function(a)
+        {
+            document.getElementById("progress").innerHTML="<h3>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>";
+        };
+
+        window.applicationCache.oncached=function()
+        {
+            alert("Page Cached!!")
+        };
+    </script>
+    <script>
+        document.cookie = 'kex=1';
+
+        // Init on English Language
+        changeLanguage('english')
+
+        function changeLanguage(lang) {
+            Array.from(document.querySelectorAll('.language')).map( element => {
+                element.style.display = 'none'
+            });
+            if (document.getElementById(lang)) {
+                document.getElementById(lang).style.display = 'block';
+            }
+        }
+    </script>
+	<center>
+    <p>
+        <b><a href="#" onclick="changeLanguage('english'); return false">English</a></b> &nbsp; &nbsp;
+        <b><a href="#" onclick="changeLanguage('russian'); return false">Русский</a></b> &nbsp; &nbsp;
+		<b><a href="#" onclick="changeLanguage('arabic'); return false">العربـية</a></b>
+		
+    </p>
+	</center>
+    <div id="english" class="language" style="display: block"><center>
+        <h3>READ THIS CAREFULLY BEFORE PROCEEDING : <font color="red"> the exploit is less stable on PS4 Fat and more stable on PS4 Slim and Pro at this moment.</h3>
+        <p><b>In case you're dumb: this ONLY works on FW 7.02. If you are on a higher firmware (e.g. 7.50), your console CAN'T BE HACKED yet.</b></p></font></center>
+        <ol>
+            <li>Click on the link that says <b>JB+MIRA</b> or <b>JB+HEN</b>, depending on your personal habits. In about 20 seconds you'll get an
+                alert saying <b>"You're all set!"</b>, followed by <b>"There is not enough free system memory"</b>. This means that everything
+                has gone well. Note: if using Mira, the screen will go dark for a dozen of seconds.<br />
+                If something went wrong during the process, you may get an alert saying <b>"Jailbreak failed! Reboot your
+                PS4 and try again."</b>. In this case you must reboot your PS4, preferrably without closing the dialog
+                box.<br />
+                If the system hangs for more than a minute (may require more time on slow Internet connections), reboot
+                your PS4 and try again.<br />
+                If the system crashes (looks like instant powerdown), press the power button on the PS4 (NOT on the
+                gamepad) until it turns on again, then retry.
+            </li>
+            <li>If you get a "There is not enough free system memory" message without any pop-ups, then it means that the webkit
+                exploit has failed. Click OK and retry. <b>This error is not going to harm your console. Success rate here is about 10% on PS4 FAT and more on PS4 Slim and Pro, so don't worry.</b></li>
+            <li><b>For advanced users:</b> To load your own payloads using NetCat, run <b>JB+NETCAT</b> and send the
+                payload to <b>TCP port 9021 (9020 for the legacy version)</b>.</li>
+        </ol><center><br>
+        <p><i>This exploit <b>does</b> crash and hang. Sometimes you even have to retry 10 times to get the
+                jailbreak.</i></p>
+        <p><b><i>Credits:</b> Synacktiv team for the WebKit exploit, @theflow for the kernel exploit, @ChendoChap for HEN, &lt;anonymous&gt; for 7.02 module dumps, 7.02 mod page by Chronoss</i></p></center>
+    </div>
+    <div id="russian" class="language" style="display: none">
+        <h3>ВНИМАТЕЛЬНО ПРОЧИТАЙТЕ ИНСТРУКЦИЮ ПРЕЖДЕ ЧЕМ ПРОДОЛЖАТЬ</h3>
+        <p><b>Для даунов: этот взлом работает ТОЛЬКО на прошивке 7.02. Если прошивка выше, эту консоль взломать НЕ ПОЛУЧИТСЯ.</b></p>
+        <ol>
+            <li>Нажмите на ссылку &laquo;JB+HEN&raquo;. В течение приблизительно 20 секунд появится всплывающее окно
+                &laquo;You're all set&raquo;, после чего вылетит ошибка нехватки памяти. Если все произошло именно так,
+                взлом сработал.<br />
+                Если что-то пошло не так, может вылететь ошибка &laquo;Jailbreak failed! Reboot your PS4 and try
+                again.&raquo;. В этом случае необходимо, не закрывая окно, перезагрузить консоль.<br />
+                Если взлом занимает больше минуты, и у вас адекватное интернет-соединение, скорее всего он повис.
+                Перезагрузите приставку и попробуйте еще раз.<br />
+                Если система крашится (выглядит как мгновенное выключение), нажимайте кнопку включения на ПРИСТАВКЕ (НЕ
+                НА КОНТРОЛЛЕРЕ), пока она не включится, после чего повторите взлом.
+            </li>
+            <li>Если вместо успешного взлома появляется ошибка нехватки памяти без каких-либо еще сообщений, это означает,
+                что эксплойт WebKit не сработал. <b>Эта ошибка вылезает в 90% случаях и НЕ ВРЕДИТ СИСТЕМЕ, просто повторите попытку.</b>
+            </li>
+            <li><b>Для продвинутых пользователей:</b> чтобы отправить пейлоад по сети (NetCat), выберите JB+NETCAT,
+                и отправьте пейлоад на TCP-порт 9021 (9020 для Legacy-версии).</li>
+        </ol>
+        <p><i>Эксплойт <b>будет</b> крашиться и виснуть, иногда вообще только с 10 попытки заводится. Тут пока что
+                никуда не денешься, разве что и дальше ждать взлом от @SpecterDev.</i></p>
+        <p><i>Credits: Synacktiv &mdash; эксплоит WebKit, @theflow &mdash; эксплоит ядра, @ChendoChap &mdash; HEN</i></p>
+    </div>
+	<div id="arabic"dir="rtl" lang="ar" class="language" style="display: none">
+        
+        <h3>اقرأ هذا بعناية قبل اي إجراء</h3>
+        <p><b> إذا كنت لاتعلم: يعمل هذا فقط على FW 7.02. إذا كنت تستخدم برنامجًا ثابتًا أعلى (مثل 7.50) ، فلا يمكن اختراق وحدة التحكم الخاصة بك حتى الآن. </b></p>
+        <ol>
+             <li>انقر فوق الارتباط الذي يحمل اسم <b> JB + MIRA </b> أو <b> JB + HEN </b> ، وانتظر حوالي 20 ثانية ، ستحصل على تنبيه يقول "You're all set!" ، متبوعًا بـ "لا توجد مساحة خالية كافية في ذاكرة النظام". هذا يعني أن كل شيء سار بشكل جيد.<br/>
+            ملحوظة: في حالة استخدام ميرا ، ستظل الشاشة مظلمة لعشرات الثواني. <br />
+            إذا حدث خطأ ما أثناء العملية ، فقد تتلقى تنبيهًا يقول "Jailbreak failed!" أعد تشغيل جهاز PS4 وحاول مرة أخرى.". في هذه الحالة ، يجب عليك إعادة تشغيل جهاز PS4 ، ويفضل أن يكون ذلك دون إغلاق مربع الحوار.<br/>
+            إذا توقف النظام لأكثر من دقيقة (قد يتطلب مزيدًا من الوقت على اتصالات الإنترنت البطيئة) ، فأعد تشغيل جهاز PS4 وحاول مرة أخرى.<br/>
+            إذا تعطل النظام (يشبه إيقاف التشغيل الفوري) ، فاضغط على زر الطاقة على PS4 (ليس عن طريق ذراع التحكم) حتى يتم تشغيله مرة أخرى ، ثم أعد المحاولة..
+         </li>
+		 
+            <li> إذا تلقيت رسالة "لا توجد ذاكرة نظام خالية كافية" بدون أي نوافذ منبثقة ، فهذا يعني أن webkit
+                 فشل الاستغلال. انقر فوق "موافق" وأعد المحاولة. <b> هذا الخطأ لن يضر وحدة التحكم الخاصة بك. يبلغ معدل النجاح هنا حوالي 10٪ على PS4 FAT وأكثر على PS4 Slim و Pro ، لذلك لا تقلق. </ b> </li>
+             <li> <b> للمستخدمين المتقدمين: </b> لتحميل حمولاتك الخاصة باستخدام NetCat ، قم بتشغيل <b> JB + NETCAT </b> وأرسل
+                 الحمولة إلى <b> منفذ TCP 9021 (9020 للإصدار القديم) </ b>. </li>
+        </ol> <center> <br>
+         <p> <i> هذا الاستغلال <b> ينهار </ b> ويتعطل. في بعض الأحيان ، يتعين عليك إعادة المحاولة 10 مرات للحصول على كسر الحماية. </i> </p>
+        <p><b><i>Credits:</b> Synacktiv team for the WebKit exploit, @theflow for the kernel exploit, @ChendoChap for HEN, &lt;anonymous&gt; for 7.02 module dumps, 7.02 mod page by Chronoss , Arabic by: HIASQ</i></p></center>
+     </div>
+</ol> <center> <br>
+    </div>
+	<div id="progress"></div>
+<center>
+<a href="hen702.html"><button type="button"><B>JB+HEN</B></button></a> &nbsp; &nbsp;
+<a href="mira702.html"><button type="button"><B>JB+MIRA</B></button></a> &nbsp; &nbsp;
+<a href="netcat702.html"><button type="button"><B>JB+NETCAT (LEGACY)</B></button></a> &nbsp; &nbsp;
+<a href="netcat702-mira.html"><button type="button"><B>JB+NETCAT</B></button></a> &nbsp; &nbsp;
+<a href="dumper.html"><button type="button"><B>DUMPER</B></button></a> &nbsp; &nbsp;
+<a href="todex.html"><button type="button"><B>TODEX</B></button></a> &nbsp; &nbsp;
+<a href="ce-30391-6_fix.html"><button type="button"><B>CE-30391-6_Fix</B></button></a> &nbsp; &nbsp;
+<a href="linux702.html"><button type="button"><B>LINUX</B></button></a>
+</body>
+
+</html>
